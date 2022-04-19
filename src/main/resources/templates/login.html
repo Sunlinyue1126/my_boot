@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登録画面</title>
+</head>
+<body>
+	<div style="text-align: center">
+		<h2>おはようございます！</h2>
+		<form name="loginForm" action="/signin" method="POST" onsubmit="return check()">
+			<div>
+				ユーザーネーム：<input name="username" type="text"><br>
+			</div>
+			<div>
+				パスワード：<input name="password" type="password"><br>
+			</div>
+			<p>
+				<input type="submit" value="登録">
+				<input type="button" onclick="window.open('/register')" value="新規登録">
+			</p>
+			<a href="/openEmail">送信</a>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="/static/js/login.js"></script>
+</html>

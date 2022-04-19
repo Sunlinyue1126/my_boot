@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.firstdevelop.boot.mapper.StudentMapper">
+    <select id="searchAll" resultType="com.firstdevelop.boot.entity.Student">
+        select * from student 
+    </select>
+    <select id="searchClassByStuID" resultType="com.firstdevelop.boot.entity.Student">
+    select * from student where stuClass = (select stuClass from student where ID = #{stuID});
+    </select>
+    <insert id="insert" parameterType="com.firstdevelop.boot.entity.Student">
+    insert into student
+    (name,age,score,address,stuClass)
+    values
+    (#{name}, #{age}, #{score}, #{address},
+    #{stuClass})
+    </insert>
+</mapper> 

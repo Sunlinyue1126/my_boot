@@ -1,0 +1,34 @@
+<!DOCTYPE html>						
+	<html xmlns:th="http://www.thymeleaf.org">						
+	<head>						
+	<meta charset="UTF-8">						
+	<title>Insert title here</title>						
+	</head>						
+	<body>						
+	<h2>E-mail 送信結果画面</h2>						
+	<div th:text="${message}"></div>						
+	<div th:text="${result_Message}"></div>						
+	<table th:if="${errorAddressList}" border="1" style="border-collapse: collapse">						
+	<thead>						
+	<tr>						
+	<td>メールアドレス</td>						
+	<td>会社名</td>						
+	<td>連絡人</td>						
+	</tr>						
+	</thead>						
+	<tbody>						
+	<tr th:each="address : ${errorAddressList}">						
+	<td th:text="${address.emailAdress}"></td>						
+	<td th:text="${address.comName}"></td>						
+	<td th:text="${address.person}"></td>						
+	</tr>						
+	</tbody>						
+	</table>						
+	<br>						
+	<div>						
+	<form method="Post" action="/openEmail">						
+	メール送信画面に戻る：<input type="submit" value="メール送信画面">						
+	</form>						
+	</div>						
+	</body>						
+	</html>						

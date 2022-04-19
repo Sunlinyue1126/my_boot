@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー</title>
+</head>
+<body>
+    <a th:text="${title}"></a>
+    <table border="1" style="border-collapse:collapse">
+        <thead style="background:yellow">
+            <tr>
+                <td>商品名</td>
+                <td>販売値段</td>
+                <td>値段</td>
+                <td>生産日時</td>
+                <td>産地</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:if="${productList.size()} eq 0">
+                <td colspan="5">商品情報が存在しません。</td>
+            </tr>
+            <tr th:each="product : ${productList}">
+                <td th:text="${product.productName}"></td>
+                <td th:text="${product.productPrice}"></td>
+                <td th:text="${product.productAccount}"></td>
+                <td th:text="${product.productDate}"></td>
+                <td th:text="${product.address}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

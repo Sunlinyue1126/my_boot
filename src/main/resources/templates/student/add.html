@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>学生</title>
+	<style>
+		span {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+    <form name="studentAddForm" action="/student/insert" method="post" onsubmit="return check()">
+			<div>
+				学生:<input id="name" type="text" name="name"/><br>
+				<span name="nameError"></span>    <!--行内元素-->
+			</div>
+			<div>
+				年齢:<input id="age" type="text" name="age"/><br>
+				<span name="ageError"></span>
+			</div>
+			<div>
+				成績:<input id="score" type="text" name="score"/>
+				<span name="scoreError"></span>
+			</div>
+			<div>
+				アドレス:<input id="address" type="text" name="address"/>
+				<span name="addressError"></span>
+			</div>
+			<div>
+				クラス:<input id="stuClass" type="text" name="stuClass"/>
+				<span name="stuClassError"></span>
+			</div>
+		<input type="submit" value="学生新規登録">
+	</form>
+</body>
+<script type="text/javascript" src="/static/js/student.js"></script>
+</html>		    	

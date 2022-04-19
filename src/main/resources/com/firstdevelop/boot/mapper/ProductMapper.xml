@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.firstdevelop.boot.mapper.ProductMapper">
+    <select id="searchAll" resultType="com.firstdevelop.boot.entity.Product">
+        select
+            product_id,
+            product_name,
+            product_price,
+            product_account,
+            product_date,
+            class_product_id,
+            address,
+            create_time,
+            update_time,
+            create_user,
+            update_user,
+            delete_flag
+        from
+            product
+        where
+            delete_flag = '0'
+    </select>
+    
+    <insert id="regist" parameterType="com.firstdevelop.boot.entity.Product">
+        insert into
+            product
+            (
+            product_name,
+            product_price,
+            product_account,
+            product_date,
+            class_product_id,
+            address,
+            create_time,
+            update_time,
+            create_user,
+            update_user,
+            delete_flag
+            )
+        values
+            (
+            #{productName},
+            #{productPrice},
+            #{productAccount},
+            #{productDate},
+            #{classProductId},
+            #{address},
+            #{createTime},
+            #{updateTime},
+            #{createUser},
+            #{updateUser},
+            '0'
+            )
+    </insert>
+</mapper>

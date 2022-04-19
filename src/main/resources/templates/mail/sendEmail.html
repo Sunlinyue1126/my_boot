@@ -1,0 +1,46 @@
+<!DOCTYPE html>						
+<html xmlns:th="http://www.thymeleaf.org">						
+<head>						
+<meta charset="UTF-8">						
+<title>Insert title here</title>						
+</head>						
+<body>						
+<h2>E-mail 送信画面</h2>						
+<div>						
+<form method="POST" enctype="multipart/form-data" action="/sendM">						
+<table border="1">						
+<tr>						
+<td>						
+<p>メール送信先リスト:</p>						
+</td>						
+<td><input type="file" name="file_address_list" /></td>						
+</tr>						
+<tr>						
+<td>						
+<p>メール件名:</p>						
+</td>						
+<td><input type="text" name="title_email_text" /></td>						
+</tr>						
+<tr>						
+<td>						
+<p>メール本文:</p>						
+</td>						
+<td><input type="file" name="file_email_text" /></td>						
+</tr>						
+<tr>						
+<td>						
+<p>添付ファイル:</p>						
+</td>						
+<td><input type="file" name="file_upload" /></td>						
+</tr>						
+<tr>						
+<td>						
+<p>送信:</p>						
+</td>						
+<td><input type="submit" value="送信" /></td>						
+</tr>						
+</table>						
+</form>						
+</div>						
+</body>						
+</html>						

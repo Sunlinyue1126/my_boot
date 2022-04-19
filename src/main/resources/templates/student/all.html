@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生情報</title>
+</head>
+<body>
+    <table border="1" style="border-collapse:collapse ">
+        <thead style="background:yellow">
+            <tr>
+                <td>ID</td>
+                <td>名前</td>
+                <td>年齢</td>
+                <td>成績</td>
+                <td>住所</td>
+                <td>クラス</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${student_list}">
+                <td th:text="${student.ID}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.age}"></td>
+                <td th:text="${student.score}"></td>
+                <td th:text="${student.address}"></td>
+                <td th:text="${student.stuClass}"></td>
+            </tr>
+        </tbody>
+    </table>                    
+
+
+</body>
+</html> 

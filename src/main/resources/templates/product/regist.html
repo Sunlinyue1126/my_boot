@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー</title>
+</head>
+<body>
+    <form action="/product/regist" method="post">
+		<div>
+			商品名:<input id="productName" type="text" name="productName"/>
+		</div>
+		<div>
+			販売値段:<input id="productPrice" type="text" name="productPrice"/>
+		</div>
+		<div>
+			値段:<input id="productAccount" type="text" name="productAccount"/>
+		</div>
+		<div>
+			産地:<input id="address" type="text" name="address"/>
+		</div>
+		<div>
+			商品クラスID:<input id="classProductId" type="text" name="classProductId"/>
+		</div>
+		
+		<input type="submit" value="登録">
+	</form>
+</body>
+</html>
